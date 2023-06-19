@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Distributed Music Editor</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1 class="text-center mt-5">Distributed Music Editor</h1>
+
+        <!-- Form to submit an audio file -->
+        <form id="uploadForm">
+            <h2>Upload a music file</h2>
+            <div class="form-group">
+                <input type="file" class="form-control" id="musicFile">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <!-- Result container for submit music -->
+        <div class="container">
+          <div id="submitResultContainer"></div>
+        </div>
+
+        <!-- Form to list all the music -->
+        <form id="listMusicForm">
+            <h2>List all Music</h2>
+            <button type="submit" class="btn btn-primary">List Music</button>
+        </form>
+
+        <!-- Result container for list music -->
+        <div class="container">
+          <div id="listMusicResultContainer"></div>
+        </div>
+
+        <!-- Form to interact with a specific music -->
+        <form id="musicForm">
+            <h2>Interact with a specific music</h2>
+            <div class="form-group">
+                <label for="specificMusicId">Music ID</label>
+                <input type="text" class="form-control" id="specificMusicId">
+            </div>
+            <div class="form-group">
+                <label for="instrumentIds">Instrument IDs - ("0" - drums) ("1" - bass) ("2" - other) ("3" - vocals) (comma-separated)</label>
+                <input type="text" class="form-control" id="instrumentIds">
+            </div>
+            <button type="submit" class="btn btn-primary">Process Music</button>
+        </form>
+
+        <!-- Result container for process music -->
+        <div class="container">
+          <div id="processMusicResultContainer"></div>
+        </div>
+
+        <!-- Form to fetch the status of a specific music -->
+        <form id="fetchMusicStatusForm">
+          <h2>Fetch Status of a Specific Music</h2>
+          <div class="form-group">
+              <label for="specificMusicId">Music ID</label>
+              <input type="text" class="form-control" id="specificMusicId">
+          </div>
+          <button type="submit" class="btn btn-primary">Fetch Processing State</button>
+        </form>
+
+        <!-- Result container for fetch music status -->
+        <div class="container">
+        <div id="musicStatusResultContainer"></div>
+        </div>
+
+
+        <!-- Form to list all jobs -->
+        <form id="listJobsForm">
+            <h2>List all Jobs</h2>
+            <button type="submit" class="btn btn-primary">List Jobs</button>
+        </form>
+
+        <!-- Result container for list jobs -->
+        <div class="container">
+          <div id="listJobsResultContainer"></div>
+        </div>
+
+        <!-- Form to interact with a specific job -->
+        <form id="jobForm">
+            <h2>Interact with a specific job</h2>
+            <div class="form-group">
+                <label for="specificJobId">Job ID</label>
+                <input type="text" class="form-control" id="specificJobId">
+            </div>
+            <button type="submit" class="btn btn-primary">Fetch Job</button>
+        </form>
+
+        <!-- Result container for fetch job -->
+        <div class="container">
+          <div id="fetchJobResultContainer"></div>
+        </div>
+
+        <!-- Form to reset system -->
+        <form id="resetForm">
+            <h2>Reset System</h2>
+            <button type="submit" class="btn btn-primary">Reset</button>
+        </form>
+
+        <!-- Result container for reset system -->
+        <div class="container">
+          <div id="resetSystemResultContainer"></div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
